@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "script2video": {
+      "command": "python",
+      "args": [
+        "-m",
+        "src.script2video.mcp_server"
+      ],
+      "cwd": "D:\\Project\\Script2Video",
+      "env": {}
+    }
+  }
+}

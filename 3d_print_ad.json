@@ -1,0 +1,135 @@
+{
+  "title": "Untitled",
+  "tags": [],
+  "config": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "global_volume": 1.0,
+    "tts": {
+      "provider": "edge-tts",
+      "default_speaker": "zh-CN-XiaoxiaoNeural",
+      "default_speed": 1.0,
+      "default_emotion": null
+    },
+    "subtitle": {
+      "width_ratio": 0.8,
+      "font_size_ratio": 0.04,
+      "default_color": "#FFFF00",
+      "background_opacity": 0.7,
+      "position_y_ratio": 0.85
+    }
+  },
+  "scenes": [
+    {
+      "duration": 8.0,
+      "type": "HOOK",
+      "key_point": "打破次元壁",
+      "emotion": "积极",
+      "tracks": [
+        {
+          "type": "image",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "Masterpiece, best quality, anime style, 1girl, vibrant colors, fantasy outfit, glowing background, looking at viewer",
+              "start": 0.0,
+              "end": 0
+            }
+          ],
+          "duration": 0
+        },
+        {
+          "type": "voice",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "配音1",
+              "start": 0.0,
+              "end": 0
+            }
+          ],
+          "duration": null
+        }
+      ]
+    },
+    {
+      "duration": 10.0,
+      "type": "TECH",
+      "key_point": "打印细节",
+      "emotion": "专业",
+      "tracks": [
+        {
+          "type": "image",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "Close-up shot of a 3D printer nozzle, red resin material, intricate figurine details emerging, cinematic lighting, 8k resolution, photorealistic",
+              "start": 0.0,
+              "end": 0
+            }
+          ],
+          "duration": 0
+        },
+        {
+          "type": "image",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "Extreme close up of anime figurine face, flawless resin texture, professional craftsmanship",
+              "start": 2.0,
+              "end": 0
+            }
+          ],
+          "duration": 0
+        },
+        {
+          "type": "voice",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "配音2",
+              "start": 0.0,
+              "end": 0
+            }
+          ],
+          "duration": null
+        }
+      ]
+    },
+    {
+      "duration": 10.0,
+      "type": "OUTRO",
+      "key_point": "成品下单",
+      "emotion": "热情",
+      "tracks": [
+        {
+          "type": "image",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "Completed painted anime figurine, professional studio lighting, depth of field, bokeh, high-end collectible, luxury display case",
+              "start": 0.0,
+              "end": 0
+            }
+          ],
+          "duration": 0
+        },
+        {
+          "type": "voice",
+          "desc": null,
+          "clips": [
+            {
+              "desc": "配音3",
+              "start": 0.0,
+              "end": 0
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  ]
+}

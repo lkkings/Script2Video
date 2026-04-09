@@ -1,0 +1,26 @@
+[project]
+name = "script2video"
+version = "0.1.0"
+description = "JSON-driven non-linear video editor with Pydantic models"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.12.5",
+    "moviepy>=1.0.3",
+    "pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "edge-tts>=6.1.0",
+    "google-genai>=1.69.0",
+    "mcp>=1.26.0",
+    "dashscope>=1.25.15",
+    "dspy>=3.1.3",
+]
+
+[project.scripts]
+script2video = "script2video.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.1.0",
+]
