@@ -41,7 +41,7 @@ uv run run_mcp_server.py
 ### 方式 2: Stdio (用于 Claude Desktop 集成)
 
 ```bash
-python run_mcp_server.py stdio
+uv run run_mcp_server.py stdio
 ```
 
 ## Claude Desktop 配置
@@ -52,12 +52,14 @@ python run_mcp_server.py stdio
 {
   "mcpServers": {
     "script2video": {
-      "command": "python",
+      "command": "uv",
       "args": [
+        "--directory",
+        "项目路径",
+        "run",
         "run_mcp_server.py",
         "stdio"
-      ],
-      "cwd": "D:\\Project\\Script2Video"
+      ]
     }
   }
 }

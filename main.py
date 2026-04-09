@@ -1,7 +1,7 @@
 from src.script2video import VideoDraft, ImageTrackBuilder, VideoTrackBuilder, VoiceTrackBuilder
 
 # 1. 初始化草稿：竖屏 1080x1920
-draft = VideoDraft.create(resolution=(1080, 1920), fps=30)
+draft = VideoDraft.create(resolution=(1080, 1920), fps=30, tags=["3D手办"])
 
 # --- 场景 1：梦想照进现实（开场） ---
 scene1 = draft.add_scene(scene_type="HOOK", key_point="打破次元壁", emotion="积极",duration=8)
@@ -30,6 +30,7 @@ scene1.add_track(
 scene2 = draft.add_scene(scene_type="TECH", key_point="打印细节", emotion="专业",duration=10)
 scene2.add_track(
     ImageTrackBuilder()
+    .desc("图片展示打印细节")
     .add_clip(
         # desc 作为提示词：机械感、微距、红蜡材质、精密
         desc="Close-up shot of a 3D printer nozzle, red resin material, intricate figurine details emerging, cinematic lighting, 8k resolution, photorealistic", 
@@ -82,6 +83,6 @@ scene3.add_track(
 
 # --- 4. 生成 ---
 draft.export_json("3d_print_ad.json")
-draft.render('3d_print_ad.mp4')
+# draft.render('3d_print_ad.mp4')
 
 print("提示词式广告脚本已构建完成！")

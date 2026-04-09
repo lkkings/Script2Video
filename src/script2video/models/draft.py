@@ -2,10 +2,10 @@
 Timeline models for Script2Video.
 Defines Track, Scene, GlobalConfig, and Timeline with JSON serialization.
 """
-from typing import Optional, List, Tuple
-from pydantic import BaseModel, Field,computed_field
+from typing import Optional, List, Tuple, Generic
+from pydantic import BaseModel, Field
 from enum import Enum
-from .clips import BaseClip
+from .clips import ClipType
 
 class TrackType(str, Enum):
     VIDEO = "video"
@@ -15,25 +15,14 @@ class TrackType(str, Enum):
     DRAWTEXT = "drawtext"
     EFFECT = "effect"
 
-class Track(BaseModel):
+class Track(BaseModel,Generic[ClipType]):
     """Track containing clips of a specific type."""
     type: TrackType = Field(..., description="Type of clips in this track")
     desc: Optional[str] = Field(None, description="Track description")
-    clips: List[BaseClip] = Field(
+    clips: List[ClipType] = Field(
         default_factory=list, description="List of clips in this track"
     )
     
-    @computed_field  # ⭐ 关键
-    @property
-    def duration(self) -> float:
-        if self.type == TrackType.VIDEO:
-            return max(clip.end for clip in self.clips)
-        elif self.type == TrackType.IMAGE:
-            return max(clip.end for clip in self.clips)
-        elif self.type == TrackType.BGM:
-            return max(clip.end for clip in self.clips)
-        elif self.type == TrackType.VOICE:
-            pass
 
 class Scene(BaseModel):
     """Scene containing multiple tracks."""
@@ -106,7 +95,6 @@ class Draft(BaseModel):
             ValueError: If file cannot be read or JSON is invalid
         """
         import json
-        from pathlib import Path
 
         try:
             with open(json_path, 'r', encoding='utf-8') as f:

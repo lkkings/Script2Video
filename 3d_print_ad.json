@@ -1,6 +1,8 @@
 {
   "title": "Untitled",
-  "tags": [],
+  "tags": [
+    "3D手办"
+  ],
   "config": {
     "resolution": [
       1080,
@@ -36,10 +38,14 @@
             {
               "desc": "Masterpiece, best quality, anime style, 1girl, vibrant colors, fantasy outfit, glowing background, looking at viewer",
               "start": 0.0,
-              "end": 0
+              "end": 0,
+              "source": "assets/anime_waifu.png",
+              "transform": null,
+              "opacity": 1.0,
+              "animation": null,
+              "fit_mode": "cover"
             }
-          ],
-          "duration": 0
+          ]
         },
         {
           "type": "voice",
@@ -48,10 +54,17 @@
             {
               "desc": "配音1",
               "start": 0.0,
-              "end": 0
+              "end": 0,
+              "text": "还在为抢不到心仪的手办而遗憾吗？别让你的热爱，只停留在二次元的屏幕里。",
+              "tts_config": {
+                "speaker": null,
+                "speed": 1.0,
+                "emotion": "neutral"
+              },
+              "volume": 0.0,
+              "add_subtitle": true
             }
-          ],
-          "duration": null
+          ]
         }
       ]
     },
@@ -63,15 +76,19 @@
       "tracks": [
         {
           "type": "image",
-          "desc": null,
+          "desc": "图片展示打印细节",
           "clips": [
             {
               "desc": "Close-up shot of a 3D printer nozzle, red resin material, intricate figurine details emerging, cinematic lighting, 8k resolution, photorealistic",
               "start": 0.0,
-              "end": 0
+              "end": 0,
+              "source": "assets/printing_process.png",
+              "transform": null,
+              "opacity": 1.0,
+              "animation": null,
+              "fit_mode": "cover"
             }
-          ],
-          "duration": 0
+          ]
         },
         {
           "type": "image",
@@ -80,10 +97,21 @@
             {
               "desc": "Extreme close up of anime figurine face, flawless resin texture, professional craftsmanship",
               "start": 2.0,
-              "end": 0
+              "end": 0,
+              "source": "assets/detail_zoom.png",
+              "transform": {
+                "position": {
+                  "x": 0.5,
+                  "y": 0.15
+                },
+                "scale": 1.0,
+                "rotation": 0.0
+              },
+              "opacity": 1.0,
+              "animation": null,
+              "fit_mode": "contain"
             }
-          ],
-          "duration": 0
+          ]
         },
         {
           "type": "voice",
@@ -92,10 +120,17 @@
             {
               "desc": "配音2",
               "start": 0.0,
-              "end": 0
+              "end": 0,
+              "text": "我们采用工业级高精度红蜡打印，0.02毫米层厚，发丝级细节还原。每一处纹理，都经得起放大检视。",
+              "tts_config": {
+                "speaker": null,
+                "speed": 1.0,
+                "emotion": "neutral"
+              },
+              "volume": 0.0,
+              "add_subtitle": true
             }
-          ],
-          "duration": null
+          ]
         }
       ]
     },
@@ -112,10 +147,14 @@
             {
               "desc": "Completed painted anime figurine, professional studio lighting, depth of field, bokeh, high-end collectible, luxury display case",
               "start": 0.0,
-              "end": 0
+              "end": 0,
+              "source": "assets/final_product.png",
+              "transform": null,
+              "opacity": 1.0,
+              "animation": null,
+              "fit_mode": "cover"
             }
-          ],
-          "duration": 0
+          ]
         },
         {
           "type": "voice",
@@ -124,10 +163,17 @@
             {
               "desc": "配音3",
               "start": 0.0,
-              "end": 0
+              "end": 0,
+              "text": "现在私信客服发送照片，开启你的私人定制之旅。把你的本命角色，带回家吧！",
+              "tts_config": {
+                "speaker": null,
+                "speed": 1.0,
+                "emotion": "neutral"
+              },
+              "volume": 0.0,
+              "add_subtitle": true
             }
-          ],
-          "duration": null
+          ]
         }
       ]
     }

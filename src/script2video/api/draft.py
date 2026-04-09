@@ -17,7 +17,8 @@ class VideoDraft:
         cls,
         resolution: tuple[int, int],
         fps: int = 30,
-        title: str = "Untitled"
+        title: str = "Untitled",
+        tags: List[str] = []
     ) -> "VideoDraft":
         """
         Create new video draft.
@@ -34,7 +35,7 @@ class VideoDraft:
             resolution=resolution,
             fps=fps
         )
-        draft = Draft(title=title, config=config)
+        draft = Draft(title=title, config=config,tags=tags)
         return cls(draft)
 
     @classmethod

@@ -55,7 +55,7 @@ class TrackBuilder(ABC,Generic[ClipType]):
         Raises:
             ValueError: If no clips were added
         """
-        return Track(type=self.type,desc=self._desc, clips=self._clips)
+        return Track[ClipType](type=self.type,desc=self._desc, clips=self._clips)
 
 
 class VideoTrackBuilder(TrackBuilder[VideoClip]):
